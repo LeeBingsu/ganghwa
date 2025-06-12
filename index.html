@@ -216,6 +216,28 @@
 
     // 시험문제 데이터 (paste.txt 전체 반영)
     const 시험문제 = {
+      "박소영T" : {
+        "math 모듈에서 π를 3으로 나눈 나머지를 구하는 코드 (띄어쓰기 없이)" : "math.remainder(math.pi,3)",
+        "x의 y제곱 값을 실수로 반환하는 코드 (띄어쓰기 없이)" : "math.pow(x,y)",
+        "tan(30°) 값을 출력하는 코드" : "math.tan(math.radians(30))",
+        "list=[1,2,3,4,5] 에서 중복없이 k개를 뽑아 리스트로 반환하는 코드 (띄어쓰기 없이)" : "random.sample(list, k)",
+        "리스트의 요소를 무작위로 섞는 코드" : "random.shuffle(list)",
+        "start 부터 stop 전까지 step 간격에 따라 난수 생성 (띄어쓰기 없이)" : "random.randrange(start,stop,step)",
+        "a이상 b이하 난수 생성 (띄어쓰기 없이)" : "random.randint(a,b)",
+        "리스트(list)의 평균을 람다함수를 이용해 구하자" : "lambda list:sum(list)/len(list)",
+        "리스트(list)에서 홀수인것을 반환 (변수로 x 사용)" : "filter(lambda x:x%2,list)",
+        "함수 내에선만 작동하는 변수는?" : "지역변수",
+        "함수 모든곳에서 작동하는 변수는?" : "전역변수",
+        "다음은 로또 번호 6개를 뽑는 python 코드를 나타낸 것이다. 빈칸에 들어갈 것은?\nimport random\nnumbers = list(range(1, 46))\nlotto = random.______(numbers, 6)\nprint(sorted(lotto))" : "sample",
+        "다음 코드의 실행 결과는?\nimport math\nprint(math.factorial(5))": "120",
+        "다음 코드의 실행 결과를 띄어쓰기로 구분해 쓰시오. (ex. 3 6)\nimport math\nx = 10\ndef func():\n    x = 4\n    return int(math.sqrt(x))\nprint(func())\nprint(x)": "2 10",
+        "다음 코드의 실행 결과를 띄어쓰기로 구분해 쓰시오. (ex. 3 6)\n(math.ceil(x): x보다 크거나 같은 가장 작은 정수를 반환)\nimport math\ny = 3\ndef calc():\n    global y\n    y = math.factorial(y)\n    return math.ceil(math.sqrt(y))\nprint(calc())\nprint(y)": "3 6",
+        "다음 코드의 실행 결과를 띄어쓰기로 구분해 쓰시오. (ex. 3 6)\nx = 10\ndef f():\n    x = 5\n    def g():\n        return x + 2\n    return g()\nprint(f())\nprint(x)": "7 10",
+        "다음은 turtle 모듈을 이용해서 정오각형을 그리는 코드이다.\n빈칸에 들어갈 것은?\nimport turtle\nmy=turtle.Screen()\nmy.title('turtle program')\nt=turtle.Turtle()\nt.shape('turtle')\nangle = 1\nwhile angle < 6:\n    t.fd(100)\n    t.left(__)\n    angle += 1": "72",
+        "다음 코드의 실행 결과를 쓰시오.\n(xcor(), ycor()는 거북이의 x, y좌표를 나타냄)\nimport turtle\nt = turtle.Turtle()\nt.forward(100)\nt.left(90)\nt.forward(50)\nprint(int(t.xcor()), int(t.ycor()))": "100 50",
+        "다음 프로그램의 실행 결과는?\nmylist = [50, 48, 60, 76, 84, 55]\nprint(list(filter(lambda x: x % 3, mylist)))": "[50, 76, 55]",
+        "다음 코드의 실행 결과를 띄어쓰기로 구분해 쓰시오. (ex. 3 6)\nsum = 0\ndef function (a, b):\n\tglobal sum\n\ttemp = a\n\ta = b\n\tb = a\n\tsum += temp\n\treturn a\nx = function(3,5)\nprint(sum, x)": "3 5"
+      },
       "문우현T": {
         "리소좀의 가수분해효소가 세포질로 흘러나와도 활성화되지 않는 이유는 가수분해효소가 염기性 환경에서 작용하기 때문이다. (O/X)": "X",
         "소포체와 골지체로부터 만들어진 커다란 소낭으로\n식물세포에서 동물세포의 리소좀과 같은 기능을 하며 식물에서 중요한 유기화합물, 무기이온을 저장하는 세포소기관은?": "액포",
