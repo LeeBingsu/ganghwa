@@ -569,7 +569,7 @@
         alert('돈이 부족합니다!');
         return;
       }
-      final_score -= 0;
+      final_score -= 5;
       showQuiz();
     }
 
@@ -591,8 +591,10 @@
         updateDisplay('정답입니다! 시험점수 +1');
         quizModal.style.display = 'none';
         if (final_score >= 5) {
+          final_score += 5
           startQuiz(); // 돈이 남아있으면 바로 다음 문제로 이동
         } else {
+          final_score += 5
           updateDisplay('돈이 부족해서 시험을 더 볼 수 없습니다.');
         }
       } else {
