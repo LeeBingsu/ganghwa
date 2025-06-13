@@ -137,7 +137,7 @@
     <div>
       <button class="btn" id="upgradeBtn">강화하기</button>
       <button class="btn btn-study" id="studyBtn">공부 (업데이트ing)</button>
-      <button class="btn btn-test" id="testBtn">시험응시권 5$</button>
+      <button class="btn btn-test" id="testBtn">시험응시</button>
     </div>
   </div>
 
@@ -565,11 +565,10 @@
     const quizSubmit = document.getElementById('quizSubmit');
 
     function startQuiz() {
-      if (final_score < 5) {
+      if (final_score < 0) {
         alert('돈이 부족합니다!');
         return;
       }
-      final_score -= 5;
       showQuiz();
     }
 
@@ -590,11 +589,9 @@
         시험점수++;
         updateDisplay('정답입니다! 시험점수 +1');
         quizModal.style.display = 'none';
-        if (final_score >= 5) {
-          final_score += 5
+        if (final_score >= 0) {
           startQuiz(); // 돈이 남아있으면 바로 다음 문제로 이동
         } else {
-          final_score += 5
           updateDisplay('돈이 부족해서 시험을 더 볼 수 없습니다.');
         }
       } else {
